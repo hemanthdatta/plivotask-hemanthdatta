@@ -9,7 +9,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'backend'))
 from skills.image import ImageAnalyzer
 
 app = Flask(__name__)
-app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'your-secret-key-change-this')
+app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY')
 jwt = JWTManager(app)
 
 def handler(request):

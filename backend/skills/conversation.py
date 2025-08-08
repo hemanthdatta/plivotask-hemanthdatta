@@ -17,7 +17,7 @@ class ConversationAnalyzer:
         self.gemini_model = genai.GenerativeModel('gemini-1.5-flash')
         
         # LemonFox API configuration
-        self.lemonfox_api_key = os.getenv('LEMONFOX_API_KEY', '3XtP1TlR8bOf7ExgtcuYCfU9VOxKIrHt')
+        self.lemonfox_api_key = os.getenv('LEMONFOX_API_KEY')
         self.lemonfox_url = "https://api.lemonfox.ai/v1/audio/transcriptions"
         
         # Memory storage for last 5 conversations
